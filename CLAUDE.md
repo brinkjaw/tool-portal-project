@@ -8,15 +8,14 @@
 
 ## Project Structure
 
-The repository is nearly empty for now. Suggested layout as files are added:
-
 ```
 /
-├── CLAUDE.md      # This file
-├── index.html     # Main page
-├── css/           # Stylesheets
-├── js/            # Scripts
-└── assets/        # Images, icons, fonts
+├── CLAUDE.md               # This file
+├── index.html              # Portal homepage (tool cards)
+├── css/main.css            # Shared styles and theme colours
+├── js/theme.js             # Shared light/dark theme toggle
+└── tools/
+    └── tool-1/index.html   # Placeholder tool page
 ```
 
 Update this section when the structure changes.
@@ -51,7 +50,9 @@ heating, lighting, ventilation, etc.)
 ### Phases
 
 **Phase 1: Portal + BMS Interface Builder**
-- Homepage with one tool card.
+- [x] Homepage with one tool card. Done: portal homepage, shared
+  header/navigation and theme toggle, plus a placeholder
+  "Tool 1 — coming soon" page (`tools/tool-1/`) that opens and returns.
 - Builder: students place push buttons and toggle switches on a
   6 × 8 snap-to-grid dashboard. They drag on desktop and tap-to-place on
   phones, and can rename, move or delete controls.
