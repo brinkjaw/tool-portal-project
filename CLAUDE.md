@@ -26,6 +26,9 @@ Update this section when the structure changes.
 1. **Responsive design:** every page must work on desktop, tablet, and phone.
 2. **Light/dark theme:** users can switch between a light and a dark theme.
    The light theme is the default.
+3. **Readable text:** text must stay easy to read, with good contrast
+   (a clear difference between text color and background color),
+   in both the light and the dark theme.
 
 ## Rules for Claude
 
