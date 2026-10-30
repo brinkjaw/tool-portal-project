@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BMS Interface Builder — Dashboard</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="builder.css">
+  <script src="../../js/theme.js"></script>
+  <script src="builder.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-name" href="../../index.html">BMS Interface Builder</a>
+      <div class="header-actions">
+        <a class="back-link" href="../../index.html">← All tools</a>
+        <button type="button" class="button" id="theme-toggle" aria-pressed="false">Dark theme</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Dashboard builder</h1>
+    <p class="intro">
+      Build a simple building control dashboard. Place push buttons and
+      toggle switches on the grid, then switch to Use mode to try them out.
+      Your dashboard is saved in this browser automatically.
+    </p>
+
+    <div class="toolbar">
+      <div class="mode-switch" role="group" aria-label="Mode">
+        <button type="button" class="button" id="mode-edit" aria-pressed="true">Edit</button>
+        <button type="button" class="button" id="mode-use" aria-pressed="false">Use</button>
+      </div>
+      <button type="button" class="button" id="clear">Clear dashboard</button>
+    </div>
+
+    <p class="hint" id="hint" aria-live="polite"></p>
+
+    <div class="builder">
+      <div class="sidebar">
+        <section class="panel" id="palette" aria-labelledby="palette-title">
+          <h2 id="palette-title">Add a control</h2>
+          <div class="palette-items">
+            <button type="button" class="button palette-item" data-type="button" aria-pressed="false">Push button</button>
+            <button type="button" class="button palette-item" data-type="switch" aria-pressed="false">Toggle switch</button>
+          </div>
+        </section>
+
+        <section class="panel" id="selected-panel" aria-labelledby="selected-title" hidden>
+          <h2 id="selected-title">Selected control</h2>
+          <label for="label-input">Label</label>
+          <input type="text" id="label-input" maxlength="30" autocomplete="off">
+          <div class="panel-actions">
+            <button type="button" class="button" id="move" aria-pressed="false">Move</button>
+            <button type="button" class="button" id="delete">Delete</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid" id="grid" role="group" aria-label="Dashboard grid, 6 columns by 8 rows"></div>
+    </div>
+  </main>
+</body>
+</html>
