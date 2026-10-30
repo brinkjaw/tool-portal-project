@@ -32,6 +32,15 @@ Update this section when the structure changes.
    (a clear difference between text color and background color),
    in both the light and the dark theme.
 
+## Visual Design
+
+"Blueprint" direction: ink blue on grid paper, square corners, thin lines.
+- Fonts: Space Grotesk (headings, labels, buttons) and Public Sans
+  (body text), loaded from Google Fonts with system fonts as fallback.
+- All colours and fonts are CSS variables in `css/main.css`. Use those
+  variables instead of new colour values.
+- Accent: blue. A switch that is on: orange.
+
 ## Feature Plan
 
 **Portal:** BMS Interface Builder, for facilities management students.

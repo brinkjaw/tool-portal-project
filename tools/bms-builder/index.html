@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BMS Interface Builder — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="builder.css">
   <script src="../../js/theme.js"></script>
@@ -41,7 +44,7 @@
     <div class="builder">
       <div class="sidebar">
         <section class="panel" id="palette" aria-labelledby="palette-title">
-          <h2 id="palette-title">Add a control</h2>
+          <h2 class="eyebrow" id="palette-title">Add a control</h2>
           <div class="palette-items">
             <button type="button" class="button palette-item" data-type="button" aria-pressed="false">Push button</button>
             <button type="button" class="button palette-item" data-type="switch" aria-pressed="false">Toggle switch</button>
@@ -49,7 +52,7 @@
         </section>
 
         <section class="panel" id="selected-panel" aria-labelledby="selected-title" hidden>
-          <h2 id="selected-title">Selected control</h2>
+          <h2 class="eyebrow" id="selected-title">Selected control</h2>
           <label for="label-input">Label</label>
           <input type="text" id="label-input" maxlength="30" autocomplete="off">
           <div class="panel-actions">
@@ -59,7 +62,12 @@
         </section>
       </div>
 
-      <div class="grid" id="grid" role="group" aria-label="Dashboard grid, 6 columns by 8 rows"></div>
+      <div class="grid-wrap">
+        <div class="grid-columns" aria-hidden="true">
+          <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span>
+        </div>
+        <div class="grid" id="grid" role="group" aria-label="Dashboard grid, 6 columns by 8 rows"></div>
+      </div>
     </div>
   </main>
 </body>
